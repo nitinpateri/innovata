@@ -1,6 +1,6 @@
 var express = require("express")
 var fs = require('fs')
-
+const port =process.env.PORT
 const app = express()
 
 app.use(express.json())
@@ -48,7 +48,7 @@ app.get("/",(req,res)=>{
         "Allow-access-Allow-Origin": '*'
     })
     return res.redirect('index.html');
-}).listen(9000);
+}).listen(port);
 
 
 console.log("Listening on PORT 3000");
