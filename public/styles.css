@@ -1,0 +1,77 @@
+h1{
+    top:50%;
+    position: absolute;
+    color:blue;
+    left:50%;
+    font-size: 32px;
+    transform: translate(-50%,-800%);
+}
+h2{
+    top:50%;
+    position: absolute;
+    color:blue;
+    left:50%;
+    font-size: 32px;
+    transform: translate(-50%,-700%);
+}
+#div{
+    top:50%;
+    position: absolute;
+    color:darkmagenta;
+    left:50%;
+    transform: translate(-50%,-100%);
+    display:block;
+}
+h3{
+    text-align: center;
+}
+input{
+    width: 300px;
+    height: 50px;
+    box-shadow:  0px 0px 2px 2px orangered;
+    border-radius: 20px;
+}
+#button1{
+    top:50%;
+    position: absolute;
+    background-color:blue;
+    left:50%;
+    transform: translate(-50%,200%);
+    border-radius: 25px;
+    width: 300px;
+    height:35px;
+    cursor: pointer;
+    font-size:15px;
+}
+#button1:hover{
+    background-color:rgba(76, 0, 255, 0);
+}
+#vote{
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 60, 60, 0.493);
+    width:300px;
+    border-radius:25px;
+    padding:23px;
+    border-color: black;
+    display:none;
+}
+select{
+    height:35px;
+    width:275px;
+    border-radius:20px;
+    box-shadow:  0px 0px 2px 2px rgb(119, 34, 3);
+}
+#button2{
+    background-color:blue;
+    border-radius: 25px;
+    width: 275px;
+    height:35px;
+    cursor: pointer;
+    font-size:15px;
+}
+#button2:hover{
+    background-color:white;
+}
