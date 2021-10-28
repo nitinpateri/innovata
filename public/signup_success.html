@@ -1,213 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Innovasta</title>
-      <style>
-          * {
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Roboto", sans-serif;
-    background: #f7f6ff;
-  }
-  
-  h2 {
-    margin: 16px;
-  }
-  
-  .container {
-    margin-top: 100px;
-    padding: 32px;
-  }
-  
-  .select-box {
-    display: flex;
-    width: 400px;
-    flex-direction: column;
-  }
-  
-  .select-box .options-container {
-    background: #2f3640;
-    color: #f5f6fa;
-    max-height: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.4s;
-    border-radius: 8px;
-    overflow: hidden;
-  
-    order: 1;
-  }
-  
-  .selected {
-    background: #2f3640;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    color: #f5f6fa;
-    position: relative;
-  
-    order: 0;
-  }
-  
-  .selected::after {
-    content: "";
-    background: url("img/arrow-down.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  
-    position: absolute;
-    height: 100%;
-    width: 32px;
-    right: 10px;
-    top: 5px;
-  
-    transition: all 0.4s;
-  }
-  
-  .select-box .options-container.active {
-    max-height: 240px;
-    opacity: 1;
-    overflow-y: scroll;
-  }
-  
-  .select-box .options-container.active + .selected::after {
-    transform: rotateX(180deg);
-    top: -6px;
-  }
-  
-  .select-box .options-container::-webkit-scrollbar {
-    width: 8px;
-    background: #0d141f;
-    border-radius: 0 8px 8px 0;
-  }
-  
-  .select-box .options-container::-webkit-scrollbar-thumb {
-    background: #525861;
-    border-radius: 0 8px 8px 0;
-  }
-  
-  .select-box .option,
-  .selected {
-    padding: 12px 24px;
-    cursor: pointer;
-  }
-  
-  .select-box .option:hover {
-    background: #414b57;
-  }
-  
-  .select-box label {
-    cursor: pointer;
-  }
-  
-  .select-box .option .radio {
-    display: none;
-  }
-  button{
-    top:50%;
-    position: absolute;
-    background-color:blue;
-    left:50%;
-    transform: translate(-225%,430%);
-    border-radius: 25px;
-    width: 300px;
-    height:35px;
-    cursor: pointer;
-    font-size:15px;
-  }
-  #button1:hover{
-    background-color:rgba(76, 0, 255, 0);
-  }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <h2>Innovasta Voting</h2>
-        <h2>Vote1</h2>
-  
-        <div class="select-box">
-          <div class="options-container">
-            <form action="/vote" method="post">
-              <div class="option">
-                <input
-                  type="radio"
-                  class="radio"
-                  id="vote1"
-                  name="project1"
-                />
-                <label for="=vote1">project1</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="1" name="project1" />
-                <label for="1">1</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="2" name="project1" />
-                <label for="2">2</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="3" name="project1" />
-                <label for="3">3</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="4" name="project1" />
-                <label for="4">4</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="5" name="project1" />
-                <label for="5">5</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="6" name="project1" />
-                <label for="6">6</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="7" name="project1" />
-                <label for="7">7</label>
-              </div>
-    
-              <div class="option">
-                <input type="radio" class="radio" id="8" name="project1" />
-                <label for="8">8</label>
-              </div>
-            </div>
-            <button type='submit'>Vote</button>
-            </form> 
-            
-          <div class="selected">
-            Vote1
-          </div>
-        </div>
-      </div>
-        
-      <script>
-          const selected = document.querySelector(".selected");
-            const optionsContainer = document.querySelector(".options-container");
-            
-            const optionsList = document.querySelectorAll(".option");
-            
-            selected.addEventListener("click", () => {
-              optionsContainer.classList.toggle("active");
-            });
-            
-            optionsList.forEach(o => {
-              o.addEventListener("click", () => {
-                selected.innerHTML = o.querySelector("label").innerHTML;
-                optionsContainer.classList.remove("active");
-              });
-            });
-            
-      </script>
-    </body>
-  </html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrong Input</title>
+    <style>
+        body{
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-150%);
+            position: absolute;
+        }
+        h1{
+            color:red;
+            text-align:center;
+        }
+        button{left:38%;
+            background-color: blue;
+            height: 35px;
+            width: 160px;
+            border-radius: 15px;
+            cursor: pointer;
+            position: absolute;
+        }
+        button:hover{
+            background-color: rgb(132, 132, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Wrong Input!</h1>
+    <h2>Please make sure that you have Entered the your id correctly.</h2>
+    <a href="/"><button>Enter again</button></a>
+</body>
+</html>

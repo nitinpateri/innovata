@@ -1,6 +1,6 @@
 var express = require("express")
 var fs = require('fs')
-const port =process.env.PORT
+const port =process.env.PORT || 8000
 const app = express()
 
 app.use(express.json())
@@ -16,8 +16,9 @@ app.post("/sign_up",(req,res)=>{
             console.log(err)
         }
         var store1 = data.split(',')
-        if (true){
+            console.log('entered try')
             for(i in store1){
+                console.log(store1[i],id)
                 if (store1[i] == id){
                 var store=[]
                 for(j in store1){
@@ -30,17 +31,10 @@ app.post("/sign_up",(req,res)=>{
                 fs.writeFile("voters.csv",store2,()=>{
                     console.log('verified')
                 })
-                return res.redirect('http://localhost:8080/')}
-    
-    }
-        }else{
-           return res.redirect('signup_fail.html')
-        }
-        
-    });
-    
-
-})
+                return res.redirect('https://forms.office.com/r/1jsA1Js6UD')}}
+        return res.redirect('signup_success.html')
+            
+            })});
 
 
 app.get("/",(req,res)=>{
